@@ -5,12 +5,11 @@ from docx import Document
 from gensim.models.keyedvectors import KeyedVectors
 
 class PaperScanner:
-    def __init__(self):
+    def __init__(self, Google_news_binary):
         pass
         # this is a 3.6 gigabyte file that needs to be downloaded at
         # https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit
-        self.word_vectors = KeyedVectors.load_word2vec_format(
-        '/home/intel/PycharmProjects/PaperScan/GoogleNews-vectors-negative300.bin', binary=True).wv
+        self.word_vectors = KeyedVectors.load_word2vec_format(Google_news_binary, binary=True).wv
 
     def compare(self, file_name1, file_name2):
         file1 = paper._clean_doc(file_name1)

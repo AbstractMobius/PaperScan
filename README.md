@@ -3,7 +3,7 @@
 
 ### How to use:
 -  similarity_threshold = 0.90
--  scanner = PaperScanner()
+-  scanner = PaperScanner(google_news_binary)
 -  def papers_copied(file_loc_p1, file_loc_p2):
 -    if (paper.compare(file_loc_p1, file_loc_p2) >= similarity_threshold):
 -        return True

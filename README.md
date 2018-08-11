@@ -10,8 +10,8 @@ similarity_threshold = 0.90  # define similarity threshold
 scanner = PaperScanner(google_news_binary)  # instantiate scanner
 
 def papers_copied(paper1_file_location, paper2_file_location):
-  # if two papers more similar than given threshold
-  if (paper.compare(paper1_file_location, paper2_file_location) >= similarity_threshold):
+  # if two papers are more similar than given threshold
+  if (scanner.compare(paper1_file_location, paper2_file_location) >= similarity_threshold):
       return True  # then two papers were copied
   return False  # otherwise, they were not copied
 ```
